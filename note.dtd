@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!ELEMENT computers (computer+) >
+	<!ELEMENT computer (CPU,GPU,RAM,photo)>
+	<!ATTLIST computer type (desktop|laptop) #REQUIRED>
+	<!ELEMENT CPU (#PCDATA)>
+	<!ATTLIST CPU type (Intel|AMD) #REQUIRED>
+	<!ELEMENT GPU (#PCDATA)>
+	<!ATTLIST GPU type (Nvidia|AMD) #REQUIRED>
+	<!ELEMENT RAM (#PCDATA)>
+	<!ATTLIST RAM type (DDR3|DDR4) #REQUIRED>
+	<!ELEMENT photo (#PCDATA)>
+
+

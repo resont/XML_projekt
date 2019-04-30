@@ -1,0 +1,32 @@
+@charset "utf-8";
+*{
+	background-color: #595959;
+}
+
+body{
+	text-align: center;
+	font-family: Arial, Geneva, Helvetica, sans-serif;
+}
+
+
+.desktop, .laptop{
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	overflow:hidden;
+	
+}
+h1{
+	color:white;
+}
+.PC{
+	margin: auto;
+	width: 50%;
+	border: 5px solid;
+	border-radius: 25px;
+	height: auto;
+	background-color: white;
+}
+span, h4{
+	background-color: white;
+}

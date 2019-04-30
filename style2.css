@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+body{
+	background-color: #595959;
+	font-family: Arial, Geneva, Helvetica, sans-serif;
+}
+p{
+	margin:auto;
+	width: 50%;
+	background-color: #595959;
+}
+
+button, input, .menu{
+	margin: auto;
+	text-align: center;
+}
+.PC{
+	margin: auto;
+	width: 70%;
+	border: 5px solid;
+	border-radius: 25px;
+	height: auto;
+	background-color: white;
+}
+img{
+	height: 70%;
+	width: 70%;
+}

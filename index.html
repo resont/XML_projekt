@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="style2.css"/>
+
+<head>
+<title>Computers</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse:collapse;
+}
+th, td {
+  padding: 5px;
+}
+</style>
+</head>
+<body><div class="menu">
+<button type="button" onclick="loadXMLDoc()">Show</button>
+<button type="button" onclick="showDesktop()">Desktop</button>
+<button type="button" onclick="showLaptop()">Laptop</button>
+<button type="button" onclick="showIntel()">Intel</button>
+<br><br>
+<input type="text" id="XMLtag"> <button type="button" onclick="showSearch()">Submit</button>
+
+</div>
+<br><br><h4>
+<p id="output"></P>
+</h4>
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      Show(this);
+    }
+  };
+  xmlhttp.open("GET", "FinalProject.xml", true);
+  xmlhttp.send();
+}
+function showDesktop() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      Desktop(this);
+    }
+  };
+  xmlhttp.open("GET", "FinalProject.xml", true);
+  xmlhttp.send();
+}
+function showLaptop() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      Laptop(this);
+    }
+  };
+  xmlhttp.open("GET", "FinalProject.xml", true);
+  xmlhttp.send();
+}
+function showIntel() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      Intel(this);
+    }
+  };
+  xmlhttp.open("GET", "FinalProject.xml", true);
+  xmlhttp.send();
+}
+
+function showSearch() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      search(this);
+    }
+  };
+  xmlhttp.open("GET", "FinalProject.xml", true);
+  xmlhttp.send();
+}
+
+
+function Show(xml) {
+  document.getElementById("output").innerHTML = "";
+  var i;
+  var xmlDoc = xml.responseXML;
+  var x = xmlDoc.getElementsByTagName("computer");
+  for (i = 0; i <x.length; i++) { 
+    document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + ("<div class='PC' style='text-align: center;'>CPU: "+x[i].getElementsByTagName("CPU")[0].childNodes[0].nodeValue +
+	"<br/>GPU: " +
+	x[i].getElementsByTagName("GPU")[0].childNodes[0].nodeValue +
+	"<br/>RAM: " +
+	x[i].getElementsByTagName("RAM")[0].childNodes[0].nodeValue +
+	"<br/><img src='"+x[i].getElementsByTagName("photo")[0].childNodes[0].nodeValue+"'></div><hr/>");
+  }
+
+}
+function Desktop(xml) {
+  document.getElementById("output").innerHTML = "";
+  var i;
+  var xmlDoc = xml.responseXML;
+  var x = xmlDoc.querySelectorAll('[type="desktop"]');
+  for (i = 0; i <x.length; i++) {
+	document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + ("<div class='PC' style='text-align: center;'>CPU: "+x[i].getElementsByTagName("CPU")[0].childNodes[0].nodeValue +
+	"<br/>GPU: " +
+	x[i].getElementsByTagName("GPU")[0].childNodes[0].nodeValue +
+	"<br/>RAM: " +
+	x[i].getElementsByTagName("RAM")[0].childNodes[0].nodeValue +
+	"<br/><img src='"+x[i].getElementsByTagName("photo")[0].childNodes[0].nodeValue+"'></div><hr/>");
+	
+  }
+  
+}
+function Laptop(xml) {
+  document.getElementById("output").innerHTML = "";
+  var i;
+  var xmlDoc = xml.responseXML;
+  var x = xmlDoc.querySelectorAll('[type="laptop"]');
+  for (i = 0; i <x.length; i++) {
+	document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + ("<div class='PC' style='text-align: center;'>CPU: "+x[i].getElementsByTagName("CPU")[0].childNodes[0].nodeValue +
+	"<br/>GPU: " +
+	x[i].getElementsByTagName("GPU")[0].childNodes[0].nodeValue +
+	"<br/>RAM: " +
+	x[i].getElementsByTagName("RAM")[0].childNodes[0].nodeValue +
+	"<br/><img src='"+x[i].getElementsByTagName("photo")[0].childNodes[0].nodeValue+"'></div><hr/>");
+	
+  }
+  
+}
+
+function Intel(xml) {
+  document.getElementById("output").innerHTML = "";
+  var i;
+  var xmlDoc = xml.responseXML;
+  var x = xmlDoc.getElementsByTagName("computer");
+  for (i = x.length-1; i >= 0; i--) { 
+    document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + ("<div class='PC' style='text-align: center;'>CPU: "+x[i].getElementsByTagName("CPU")[0].childNodes[0].nodeValue +
+	"<br/>GPU: " +
+	x[i].getElementsByTagName("GPU")[0].childNodes[0].nodeValue +
+	"<br/>RAM: " +
+	x[i].getElementsByTagName("RAM")[0].childNodes[0].nodeValue +
+	"<br/><img src='"+x[i].getElementsByTagName("photo")[0].childNodes[0].nodeValue+"'></div><hr/>");
+  }
+
+}
+
+function search(xml) {
+  document.getElementById("output").innerHTML = "";
+  var i;
+  var xmlDoc = xml.responseXML;
+  var z = document.getElementById('XMLtag').value;
+  var x = xmlDoc.getElementsByTagName(z);
+  for (i = 0; i < x.length; i++) { 
+    document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + ("<div class='PC' style='text-align: center;'>CPU: "+x[i].getElementsByTagName("CPU")[0].childNodes[0].nodeValue +
+	"<br/>GPU: " +
+	x[i].getElementsByTagName("GPU")[0].childNodes[0].nodeValue +
+	"<br/>RAM: " +
+	x[i].getElementsByTagName("RAM")[0].childNodes[0].nodeValue +
+	"<br/><img src='"+x[i].getElementsByTagName("photo")[0].childNodes[0].nodeValue+"'></div><hr/>");
+  }
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>

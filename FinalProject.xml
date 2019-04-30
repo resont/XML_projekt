@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE computers SYSTEM "note.dtd">
+<?xml-stylesheet type="text/xsl" href="ShowProject.xslt"?>
+
+
+
+<computers>
+	<computer type="desktop">
+  		<CPU type="Intel">Intel core i7-7700k</CPU>
+  		<GPU type="Nvidia">RTX 2060</GPU>
+  		<RAM type="DDR4">16 GB</RAM>
+  		<photo>https://images-cdn.azureedge.net/azure/in-resources/199ee40b-11b8-466c-b005-1d0eeaefb4a2/Images/ProductImages/Source/p041il.jpg;width=600</photo>
+	</computer>
+	
+	<computer type="desktop">
+  		<CPU type="Intel">Intel core i7-8700</CPU>
+  		<GPU type="AMD">Radeon RX 580</GPU>
+  		<RAM type="DDR4">8 GB</RAM>
+  		<photo>https://assets.pcmag.com/media/images/509139-prime-day-desktop-deals.png</photo>
+	</computer>
+	
+	<computer type="desktop">
+  		<CPU type="AMD">AMD Ryzen 1200</CPU>
+  		<GPU type="Nvidia">GTX 1060</GPU>
+  		<RAM type="DDR3">8 GB</RAM>
+  		<photo>https://c.s-microsoft.com/en-us/CMSImages/Dell_Inspiron_27_7000.jpg?version=6b6041f9-88a2-259b-67eb-49d9d8209b82</photo>
+	</computer>
+	
+	<computer type="laptop">
+  		<CPU type="Intel">Intel core i5-8250U</CPU>
+  		<GPU type="Nvidia">MK150</GPU>
+  		<RAM type="DDR4">8 GB</RAM>
+  		<photo>https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2018/1/pr_2018_1_22_7_57_7_910_00.jpg</photo>
+	</computer>
+	
+	<computer type="laptop">
+  		<CPU type="Intel">Intel core i7-8750H</CPU>
+  		<GPU type="Nvidia">GTX 1060</GPU>
+  		<RAM type="DDR4">16 GB</RAM>
+  		<photo>https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2017/7/pr_2017_7_21_12_5_36_29.jpg</photo>
+	</computer>
+	
+	<computer type="desktop">
+  		<CPU type="AMD">AMD FX-8170</CPU>
+  		<GPU type="AMD">Radeon HD 7770</GPU>
+  		<RAM type="DDR3">4 GB</RAM>
+  		<photo>https://cdn.shopclues.com/images/thumbnails/10897/320/320/ac2v02242611124420461421072469.jpg</photo>
+	</computer>
+	
+	<computer type="laptop">
+  		<CPU type="AMD">AMD A6-7310</CPU>
+  		<GPU type="AMD">Radeon R4</GPU>
+  		<RAM type="DDR3">4 GB</RAM>
+  		<photo>https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2017/11/pr_2017_11_22_12_48_54_741_00.jpg</photo>
+	</computer>
+	
+	<computer type="desktop">
+  		<CPU type="Intel">Intel Core i5-9400</CPU>
+  		<GPU type="Nvidia">GTX 1080Ti</GPU>
+  		<RAM type="DDR4">16 GB</RAM>
+  		<photo>https://refurbishcomputerwarehouse.com/wp-content/uploads/2018/05/dell-desktop-computer-500x500.jpg</photo>
+	</computer>
+	
+	<computer type="laptop">
+  		<CPU type="AMD">AMD E2-9000</CPU>
+  		<GPU type="AMD">Radeon R</GPU>
+  		<RAM type="DDR4">4 GB</RAM>
+  		<photo>https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2018/11/pr_2018_11_21_10_37_33_972_00.jpg</photo>
+	</computer>
+	
+	<computer type="laptop">
+  		<CPU type="Intel">Intel Core i5-8250U</CPU>
+  		<GPU type="Nvidia">MX130</GPU>
+  		<RAM type="DDR4">8 GB</RAM>
+  		<photo>https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2018/5/pr_2018_5_24_18_19_12_321_06.jpg</photo>
+	</computer>
+	
+</computers>
